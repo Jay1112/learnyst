@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --dark: rgba(0, 0, 0, 0.85);
+  --light: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="light"] {
+  --primary: #5fa8e3;
+  --secondary: #475f7a;
+  --success: #3cbf74;
+  --danger: #f3867a;
+  --info: #5fa8e3;
+  --warning: #fac76e;
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+
+[data-theme="dark"] {
+  --primary: #3498db;
+  --secondary: #2c3e50;
+  --success: #27ae60;
+  --danger: #e74c3c;
+  --info: #3498db;
+  --warning: #f39c12;
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+}
+
+.ff-poppins {
+  font-family: "Poppins";
+}
+
+.ff-roboto {
+  font-family: "Roboto";
+}
+
+.ff-monster {
+  font-family: "Montserrat";
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}

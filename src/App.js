@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import { handleTheme } from "./utils/themeHandler";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function App() {
   }
 
   useEffect(() => {
+    handleTheme();
     if (user) {
       getUser(user.email)
     }

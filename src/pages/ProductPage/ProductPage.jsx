@@ -1,8 +1,15 @@
+import { toggleTheme } from "../../utils/themeHandler";
+
 function ProductPage(){
+
+    function handleToggleTheme(){
+        toggleTheme();
+    }
+
     return (
-        <>
-            Product page
-        </>
+        <div>
+            <button onClick={handleToggleTheme} className="bg-success">Change Theme</button>
+        </div>
     );
 }
 
