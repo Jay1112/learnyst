@@ -58,8 +58,8 @@
   border-bottom: 2px solid #7878784B;
 }
 
-body {
+body, nav {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  transition: background-color 300ms;
+  transition: background-color 700ms;
 }

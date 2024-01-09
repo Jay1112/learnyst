@@ -4,7 +4,7 @@ import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 function Navbar(){
     return (
         <nav className="bg-[var(--color-bg)] flex w-full items-stretch justify-center py-4 app-box-shadow sticky top-0 z-10">
-            <p className="flex-1 md:flex-none text-3xl md:text-2xl tracking-wide ff-monster font-semibold mx-4 text-word">Learnyst</p>
+            <p className="flex-1 md:flex-none text-3xl md:text-2xl tracking-wider ff-monster font-semibold mx-4 text-word">Learnyst</p>
             <div className="flex-1 hidden md:flex items-stretch justify-center">
                 <ul className="w-full flex items-center justify-start px-2">
                     {
