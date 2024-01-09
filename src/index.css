@@ -9,15 +9,15 @@
 }
 
 [data-theme="light"] {
-  --primary: #5fa8e3;
-  --secondary: #475f7a;
-  --success: #3cbf74;
-  --danger: #f3867a;
-  --info: #5fa8e3;
-  --warning: #fac76e;
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+  --info: #0dcaf0;
+  --warning: #ffc107;
   --color-bg: var(--light);
   --color-fg: var(--dark);
-  --word : #1e1e1e;
+  --word : rgba(21,25,29);
 }
 
 [data-theme="dark"] {
@@ -42,6 +42,12 @@
 
 .ff-monster {
   font-family: "Montserrat";
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(90deg,#4ca5ff,#b573f8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .debug {
