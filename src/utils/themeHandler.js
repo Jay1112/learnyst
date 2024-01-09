@@ -25,15 +25,17 @@ export function setTheme(theme){
         localStorage.setItem(AppConstatnts.THEME_KEY,theme);
         htmlTag.setAttribute('data-theme',theme);
     }
-    if(theme === AppConstatnts.LIGHT){
+    else if(theme === AppConstatnts.LIGHT){
         localStorage.setItem(AppConstatnts.THEME_KEY,theme);
         htmlTag.setAttribute('data-theme',theme);
+    }
+    else{
+        localStorage.setItem(AppConstatnts.THEME_KEY,AppConstatnts.DARK);
+        htmlTag.setAttribute('data-theme',AppConstatnts.DARK);
     }
 }
 
 export function handleTheme(){
     const theme = getCurrentTheme();
-    if(!theme){
-        setTheme(AppConstatnts.LIGHT);
-    }
+    setTheme(theme);
 }

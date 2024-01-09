@@ -12,6 +12,8 @@ module.exports = {
         "danger" : "var(--danger)",
         "info" : "var(--info)",
         "warning" : "var(--warning)",
+        "mac" : "var(--mac)",
+        "word" : "var(--word)"
       }
     },
   },

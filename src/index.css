@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --dark: rgba(0, 0, 0, 0.85);
-  --light: rgba(255, 255, 255, 0.85);
+  --dark: #1B1725;
+  --light: #FCFFFD;
+  --mac: #787878;
 }
 
 [data-theme="light"] {
@@ -14,8 +15,9 @@
   --danger: #f3867a;
   --info: #5fa8e3;
   --warning: #fac76e;
-  --color-bg: #ffffff;
-  --color-fg: #000000;
+  --color-bg: var(--light);
+  --color-fg: var(--dark);
+  --word : #1e1e1e;
 }
 
 [data-theme="dark"] {
@@ -25,8 +27,9 @@
   --danger: #e74c3c;
   --info: #3498db;
   --warning: #f39c12;
-  --color-bg: #000000;
-  --color-fg: #ffffff;
+  --color-bg: var(--dark);
+  --color-fg: var(--light);
+  --word : #fae7c8;
 }
 
 .ff-poppins {
@@ -41,7 +44,16 @@
   font-family: "Montserrat";
 }
 
+.debug {
+  border: 1px solid var(--color-fg);
+}
+
+.app-box-shadow {
+  border-bottom: 2px solid #7878784B;
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
+  transition: background-color 300ms;
 }
