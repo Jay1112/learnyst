@@ -10,19 +10,20 @@ import HomePage from "./pages/HomePage/HomePage";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
-import { handleTheme } from "./utils/themeHandler";
+import useTheme from "./hooks/useTheme";
 
 function App() {
   const dispatch = useDispatch();
   const [user, loading, error] = useAuthState(auth);
   const { getUser } = useUser();
+  const { initialTheme } = useTheme();
 
   function handleClick() {
     signInWithGoogle();
   }
 
   useEffect(() => {
-    handleTheme();
+    initialTheme();
     if (user) {
       getUser(user.email)
     }
