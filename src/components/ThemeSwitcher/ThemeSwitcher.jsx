@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { FaRegMoon } from "react-icons/fa";
 import { FaRegSun } from "react-icons/fa6";
 import { AppConstatnts } from "../../constants/constants";

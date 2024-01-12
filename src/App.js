@@ -11,6 +11,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import useTheme from "./hooks/useTheme";
+import LogInPage from "./pages/LogInPage/LogInPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -18,9 +19,9 @@ function App() {
   const { getUser } = useUser();
   const { initialTheme } = useTheme();
 
-  function handleClick() {
-    signInWithGoogle();
-  }
+  // function handleClick() {
+  //   signInWithGoogle();
+  // }
 
   useEffect(() => {
     initialTheme();
@@ -31,10 +32,11 @@ function App() {
 
   return (
     <Routes>
-      {   user    &&  !loading   &&  <Route path="/" element={<HomePage/>}></Route>}
-      {   !user   &&  !loading   &&  <Route path="/" element={<ProductPage/>}></Route>}
-      {   loading &&  <Route path="*" element={<LoadingPage/>}></Route> }
-      {   !loading &&  <Route path="*" element={<PageNotFound/>}></Route> }
+      {   user      &&  !loading   &&  <Route path="/" element={<HomePage/>}></Route>}
+      {   !user     &&  !loading   &&  <Route path="/login" element={<LogInPage/>}></Route>}
+      {   !user     &&  !loading   &&  <Route path="/" element={<ProductPage/>}></Route>}
+      {   loading   &&  <Route path="*" element={<LoadingPage/>}></Route> }
+      {   !loading  &&  <Route path="*" element={<PageNotFound/>}></Route> }
     </Routes>
   );
 }
