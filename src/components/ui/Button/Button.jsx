@@ -1,15 +1,16 @@
-function Button({ classStyle, buttonCallBack, title, children }) {
-    console.log(classStyle)
-
+function Button({ classStyle, buttonCallBack, title, children, disabled = false }) {
     function handleClick(){
-        buttonCallBack();
+        if(buttonCallBack){
+            buttonCallBack();
+        }
     }
 
     return (
         <button
-        onClick={handleClick}
-        type="button"
-        className={classStyle}
+            disabled={disabled}
+            onClick={handleClick}
+            type="button"
+            className={classStyle}
         >
           {children}
         </button>

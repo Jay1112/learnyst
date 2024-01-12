@@ -15,9 +15,10 @@ function useUser(){
     const createUser = async (userData) => {
         setCreateLoading(true);
         try {
-            const docRef = await addDoc(collection(db, "users"),userData);
+            await addDoc(collection(db, "users"),userData);
             setCreateLoading(false);
             dispatch( { type : AuthActions.SET_USER_DATA, payload : userData } );
+            dispatch({ type : AuthActions.SET_LOGIN_SUCCESS });
         }catch(err){
             setCreateLoading(false);
             setCreateError({ message : err.message });

@@ -5,9 +5,11 @@ import {
     signOut
 } from "firebase/auth";
 import { AuthActions } from "../redux/constants/AuthConstants";
+import { useNavigate } from "react-router-dom";
 
 function useLogOut(){
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
     const [error,setError] = useState(null);
 
@@ -16,6 +18,7 @@ function useLogOut(){
             const res = await signOut(auth);
             const resp = await res.json();
             dispatch({ type : AuthActions.SET_LOGOUT });
+            navigate('/');
             setLoading(false);
         }catch(err){
             setError('Sign-Out Failed');
