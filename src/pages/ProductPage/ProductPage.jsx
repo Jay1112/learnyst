@@ -29,13 +29,6 @@ function ProductPage() {
               <span className="text-orange-500">Free Resources</span>.
             </p>
             <div className="mt-6 px-4 md:px-0 md:mt-12">
-              {/* <button
-                onClick={handleGetStarted}
-                type="button"
-                className=
-              >
-                
-              </button> */}
               <Button
                 buttonCallBack={handleGetStarted}
                 classStyle={
