@@ -6,17 +6,18 @@ function LogIn(){
     const { isLoading, signInWithGoogle } = useLogIn();
 
     return (
-        <div className="w-full md:w-1/4 flex items-center justify-center px-4 md:px-0">
-           <div className="w-full">
-                <Button 
-                    disabled={isLoading}
-                    buttonCallBack={signInWithGoogle}
-                    classStyle={'w-full flex items-center justify-center bg-[var(--color-fg)] p-4 rounded-full hover:bg-[var(--color-bg)] text-[var(--color-bg)] hover:text-[var(--color-fg)] border-2 border-transparent hover:border-rose-500 cursor-pointer'}
-                >
-                    <img  src={GoogleLogo} width={30} height={30} alt="google login" className="mx-2" />
-                    <p className="flex-1 text-2xl ff-poppins font-semibold mx-2">Sign in With Google</p>
-                </Button>
-           </div>
+        <div className="w-full md:w-1/4 flex items-center justify-center flex-col px-4 md:px-0">
+            <div className="w-full text-center mb-12 text-3xl ff-poppins font-semibold tracking-wide">Log in to your account</div>
+            <div className="w-full">
+                    <Button 
+                        disabled={isLoading}
+                        buttonCallBack={signInWithGoogle}
+                        classStyle={'w-full flex items-center justify-center bg-[var(--color-fg)] p-4 rounded-full hover:bg-[var(--color-bg)] text-[var(--color-bg)] hover:text-[var(--color-fg)] border-2 border-transparent hover:border-rose-500 cursor-pointer'}
+                    >
+                        <img  src={GoogleLogo} width={30} height={30} alt="google login" className="mx-2" />
+                        <p className="flex-1 text-2xl ff-poppins font-semibold mx-2">Sign in With Google</p>
+                    </Button>
+            </div>
         </div>
     );
 }

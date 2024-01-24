@@ -11,6 +11,7 @@ import {
     signInWithPopup,
 } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-hot-toast';
 
 function useLogIn(){
     const [isLoading,setLoading] = useState(false);
@@ -37,9 +38,11 @@ function useLogIn(){
             }
             navigate('/');
             setLoading(false);
+            toast.success('Successfully Logged In!');
         } catch (err) {
             setError({ message : err.message });
             setLoading(false);
+            toast.error(err.message);
         }
     };
 

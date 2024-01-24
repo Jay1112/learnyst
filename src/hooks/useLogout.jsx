@@ -6,6 +6,7 @@ import {
 } from "firebase/auth";
 import { AuthActions } from "../redux/constants/AuthConstants";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-hot-toast';
 
 function useLogOut(){
     const dispatch = useDispatch();
@@ -15,14 +16,15 @@ function useLogOut(){
 
     const doLogout = async () => {
         try {
-            const res = await signOut(auth);
-            const resp = await res.json();
+            await signOut(auth);
             dispatch({ type : AuthActions.SET_LOGOUT });
             navigate('/');
             setLoading(false);
+            toast.success('Successfully Logged Out!');
         }catch(err){
             setError('Sign-Out Failed');
             setLoading(false);
+            toast.error(err.message);
         }
     };
 

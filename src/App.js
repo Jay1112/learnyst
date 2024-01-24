@@ -15,13 +15,9 @@ import LogInPage from "./pages/LogInPage/LogInPage";
 
 function App() {
   const dispatch = useDispatch();
-  const [user, loading, error] = useAuthState(auth);
+  const [user,loading] = useAuthState(auth);
   const { getUser } = useUser();
   const { initialTheme } = useTheme();
-
-  // function handleClick() {
-  //   signInWithGoogle();
-  // }
 
   useEffect(() => {
     initialTheme();

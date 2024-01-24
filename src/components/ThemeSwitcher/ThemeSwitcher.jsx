@@ -11,7 +11,7 @@ function ThemeSwitcher(){
     }
 
     return (
-        <button className="p-2 rounded-sm" onClick={handleToggleTheme}>
+        <button className="p-2.5 rounded-sm" onClick={handleToggleTheme}>
             { currentTheme === AppConstatnts.DARK && <FaRegMoon className="text-lg"/>}
             { currentTheme === AppConstatnts.LIGHT && <FaRegSun  className="text-lg" />}
         </button>

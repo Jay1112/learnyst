@@ -1,13 +1,13 @@
-import { IoIosHome } from "react-icons/io";
+import { FaUserCircle } from "react-icons/fa";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { BiSolidContact } from "react-icons/bi";
 
 export const navLinks = [
     {
         id : 1,
-        label : 'Home',
-        link : '/',
-        icon : <IoIosHome/>
+        label : 'Profile',
+        link : '/profile',
+        icon : <FaUserCircle />
     },
     {
         id : 2,
