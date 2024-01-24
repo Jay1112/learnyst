@@ -3,10 +3,10 @@ import TeamImage from "../../assets/team.webp";
 import NavWrapper from "../../components/NavWrapper/NavWrapper";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/ui/Button/Button";
+import { AppConstatnts } from "../../constants/constants";
 
 function ProductPage() {
   const navigate = useNavigate();
-  const productAreaHeight = "h-[calc(100vh-70px)]";
 
   function handleGetStarted() {
     navigate("/login");
@@ -15,7 +15,7 @@ function ProductPage() {
   return (
     <NavWrapper>
       <div
-        className={`${productAreaHeight} flex items-stretch justify-center flex-col-reverse md:flex-row`}
+        className={`${AppConstatnts.NAVBAR_HEIGHT} flex items-stretch justify-center flex-col-reverse md:flex-row`}
       >
         <div className="flex-none  md:flex-1 flex items-center justify-stretch flex-col px-4">
           <div className="w-full flex-1 md:w-4/5 flex items-start justify-center flex-col">

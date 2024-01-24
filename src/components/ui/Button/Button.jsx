@@ -1,4 +1,4 @@
-function Button({ classStyle, buttonCallBack, title, children, disabled = false }) {
+function Button({ classStyle, buttonCallBack, children, disabled = false }) {
     function handleClick(){
         if(buttonCallBack){
             buttonCallBack();

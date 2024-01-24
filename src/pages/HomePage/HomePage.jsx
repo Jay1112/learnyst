@@ -1,13 +1,13 @@
 import useLogOut from "../../hooks/useLogout";
 import NavWrapper from "../../components/NavWrapper/NavWrapper";
+import { AppConstatnts } from "../../constants/constants";
 
 function HomePage(){
     const { doLogout } = useLogOut();
-    const productAreaHeight = "h-[calc(100vh-70px)]";
 
     return (
         <NavWrapper>
-            <div className={`${productAreaHeight}`}>
+            <div className={`${AppConstatnts.NAVBAR_HEIGH}`}>
 
             Home Page
             <button onClick={doLogout}>Sign out</button>
