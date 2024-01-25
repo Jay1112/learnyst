@@ -67,3 +67,15 @@ body, nav {
   color: var(--color-fg);
   transition: background-color 700ms;
 }
+
+.d-flex-ten {
+  flex: 0.1;
+}
+
+.d-flex-thirty {
+  flex: 0.3;
+}
+
+.d-flex-fifty {
+  flex: 0.5;
+}
