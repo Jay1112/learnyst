@@ -15,7 +15,7 @@ function ProductPage() {
   return (
     <NavWrapper>
       <div
-        className={`${AppConstatnts.NAVBAR_HEIGHT} flex items-stretch justify-center flex-col-reverse md:flex-row`}
+        className={`h-[calc(100vh-70px)] flex items-stretch justify-center flex-col-reverse md:flex-row`}
       >
         <div className="flex-none  md:flex-1 flex items-center justify-stretch flex-col px-4">
           <div className="w-full flex-1 md:w-4/5 flex items-start justify-center flex-col">

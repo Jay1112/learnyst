@@ -27,7 +27,7 @@ function DesktopNavbar(){
                     }
                 </ul>
             </div>
-            <div className='bg-[var(--color-fg)] text-[var(--color-bg)] rounded-md flex items-center justify-center mx-1'>
+            <div className='bg-[var(--color-fg)] text-[var(--color-bg)] rounded-md flex items-center justify-center mx-2'>
                 <ThemeSwitcher />
             </div>
             {

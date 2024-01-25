@@ -5,7 +5,7 @@ import { AppConstatnts } from "../../constants/constants";
 function LogInPage(){
     return (
         <NavWrapper>
-            <div className={`w-full ${AppConstatnts.NAVBAR_HEIGHT} flex items-center justify-center`}>
+            <div className={`w-full h-[calc(100vh-70px)] flex items-center justify-center`}>
                 <LogIn/>
             </div>
         </NavWrapper>

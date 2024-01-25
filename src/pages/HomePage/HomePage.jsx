@@ -1,16 +1,11 @@
-import useLogOut from "../../hooks/useLogout";
 import NavWrapper from "../../components/NavWrapper/NavWrapper";
-import { AppConstatnts } from "../../constants/constants";
+import DevArea from "../../components/DevArea/DevArea";
 
 function HomePage(){
-    const { doLogout } = useLogOut();
-
     return (
         <NavWrapper>
-            <div className={`${AppConstatnts.NAVBAR_HEIGH}`}>
-
-            Home Page
-            <button onClick={doLogout}>Sign out</button>
+            <div className={`h-[calc(100vh-70px)] flex items-start md:items-center justify-center p-2 overflow-scroll`}>
+                <DevArea />
             </div>
         </NavWrapper>
     );

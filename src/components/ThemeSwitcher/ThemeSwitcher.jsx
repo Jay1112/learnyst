@@ -2,6 +2,7 @@ import { FaRegMoon } from "react-icons/fa";
 import { FaRegSun } from "react-icons/fa6";
 import { AppConstatnts } from "../../constants/constants";
 import useTheme from "../../hooks/useTheme";
+import { useEffect } from "react";
 
 function ThemeSwitcher(){
     const { toggleTheme, currentTheme } = useTheme();
